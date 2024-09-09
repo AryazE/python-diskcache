@@ -30,7 +30,7 @@ jobs:
 
     - name: Test
       run: |
-        pytest -n 4
+        pytest tests
     
     - name: Report results
       uses: AryazE/auto-dylin/report@main
