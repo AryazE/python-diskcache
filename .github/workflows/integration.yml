@@ -23,6 +23,7 @@ jobs:
         pip install --upgrade pip
         pip install -r requirements-dev.txt
         echo "DJANGO_SETTINGS_MODULE=tests.settings" > $GITHUB_ENV
+        echo "PYTHONPATH=." >> $GITHUB_ENV
     
     - name: Instrument code
       uses: AryazE/auto-dylin/instrument@main
