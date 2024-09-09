@@ -22,6 +22,15 @@ jobs:
       run: |
         pip install --upgrade pip
         pip install -r requirements-dev.txt
+    
+    - name: Instrument code
+      uses: AryazE/auto-dylin/instrument@main
+      with:
+        analysis-coverage: false
 
     - name: Test
       run: pytest -n 4
+    
+    - name: Report results
+      uses: AryazE/auto-dylin/report@main
+        
