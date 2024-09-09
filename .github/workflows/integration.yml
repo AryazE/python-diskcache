@@ -29,7 +29,8 @@ jobs:
         analysis-coverage: false
 
     - name: Test
-      run: pytest -n 4
+      run: |
+        pytest -n 4 --doctest-glob="*.rst" --ignore docs/case-study-web-crawler.rst --ignore docs/sf-python-2017-meetup-talk.rst --ignore tests/benchmark_core.py --ignore tests/benchmark_djangocache.py --ignore tests/benchmark_glob.py --ignore tests/issue_85.py --ignore tests/plot.py
     
     - name: Report results
       uses: AryazE/auto-dylin/report@main
